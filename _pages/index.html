@@ -1,11 +1,36 @@
 ---
 layout: default
+title: Home
 ---
+<div class = "container">
+<!-- title-->
+  <p> Luba's website for thoughts + projects + meditation reflections + travel notes + plants appreciation</p>
 
-<h4>blog</h4>
-{% for post in site.posts %}
-		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
-		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-{% endfor %}
+  	<div class="row">
+	  	{% for post in site.posts %}
+	  	<div class = "col-sm-8"> 
+	          <div class="panel panel-success">
+	          <!-- for header -->
+	            <div class = "panel-heading"> 
+	              <p> {{post.title}} </p>
+	              <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+	            </div>
+	            <div class="panel-body">
+	            	{{post.content}}
+	            </div>
+	          </div>
+	        </div>
+		{% endfor %}
+		 <!-- tags -->
+       <div class = "col-sm-4"> 
+          <div class="panel panel-success">
+            <div class="panel-body">
+              <p> #lifehack</p>
+              <p> #quote </p>
+            </div>
+          </div>
+       </div>
+      </div> 
 
-<p>subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+	</div>
+</div>
