@@ -10,7 +10,7 @@ github_username:  lubalesuan
 # Build settings
 sass:
   sass_dir: _sass
-include: ['_pages']
+include: ['_pages', '_includes', '_posts']
 markdown: kramdown
 kramdown:
   input: GFM

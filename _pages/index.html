@@ -4,10 +4,26 @@ title: Luba's website for thoughts + projects + meditation reflections + travel 
 ---
 <!-- title-->
  
+
  	<div class= "row">
- 		<div class = "col-sm-8">
- 		</div>
- 	 	<!-- tags -->
+ 	
+	  	<div class = "container col-sm-8"> 
+	  		{% for post in site.posts %}
+		        <div class="row panel panel-success">
+		        <!-- for header -->
+		            <div class = "panel-heading"> 
+		            	<p> {{post.title}} </p>
+		            	<time>{{ post.date | date: "%b %-d, %Y" }}</time>
+		            </div>
+		            <div class="panel-body">
+		            	{{post.content}}
+		            </div>
+		        </div>
+	        {% endfor %}
+	    </div>
+		
+
+		<!-- tags -->
        <div class = "col-sm-4"> 
           <div class="panel panel-success">
             <div class="panel-body">
@@ -17,24 +33,5 @@ title: Luba's website for thoughts + projects + meditation reflections + travel 
             </div>
           </div>
        </div>
- 	</div>
-
-  	<div class="row">
-	  	{% for post in site.posts %}
-	  	<div class = "col-sm-8"> 
-	          <div class="panel panel-success">
-	          <!-- for header -->
-	            <div class = "panel-heading"> 
-	              <p> {{post.title}} </p>
-	              <time>{{ post.date | date: "%b %-d, %Y" }}</time>
-	            </div>
-	            <div class="panel-body">
-	            	{{post.content}}
-	            </div>
-	          </div>
-	        </div>
-		{% endfor %}
-		
-      </div> 
-
-      
+ 
+    </div>
