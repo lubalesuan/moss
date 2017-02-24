@@ -1,0 +1,12 @@
+
+ body {
+ margin-top: 5%;
+ }
+
+ .content-body{
+ 	margin-top: 2%;
+ }
+
+.col-sm-4 {
+ 	position: static;
+ }
