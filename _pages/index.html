@@ -24,14 +24,16 @@ title: Luba's website for thoughts + projects + meditation reflections + travel 
 		
 
 		<!-- tags -->
-       <div class = "col-sm-4"> 
-          <div class="panel panel-success">
-            <div class="panel-body">
-              <p> #lifehack</p>
-              <p> #quote </p>
-              <p> #think </p>
-            </div>
-          </div>
+       	<div class = "col-sm-4"> 
+          	<div class="panel panel-success">
+	            <div class="panel-body">
+	            {% for page in site.pages%}
+	            	<a href = {{page.link}}> {{page.tag}}</a>
+	            {% endfor %}
+	<!--               <a> #quote </p>
+	              <p> #think </p>
+	 -->        </div>
+        	</div>
        </div>
  
     </div>
