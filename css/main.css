@@ -10,3 +10,13 @@
 .col-sm-4 {
  	position: static;
  }
+
+ .panel-body {
+ 	padding: 20px;
+ }
+
+ nav {
+ 	margin-bottom: 5%;
+ }
+
+ 
